@@ -2182,7 +2182,7 @@ _p9k_prompt_detect_virt_init() {
 declare last_read_my_isp_status=$(date +%s)
 prompt_my_isp_status() {
     local ispAndCty=()
-    if (( (last_read_my_isp_status + 5*60) < %(date +%s) ))
+    if (( (last_read_my_isp_status + 5*60) < $(date +%s) ))
     while read -r val
     do
        ispAndCty+=("$val")
